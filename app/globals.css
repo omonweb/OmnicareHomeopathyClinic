@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Pastel & Healing Color Palette */
-  --color-primary: #a8e6c7;      /* Soft mint green - healing & calming */
-  --color-primary-light: #d4f5e8; /* Very light mint - backgrounds */
-  --color-primary-dark: #6dd3b3;  /* Muted mint - darker accents */
-  --color-accent: #ffd6b8;        /* Warm peach - gentle energy */
-  --color-accent-light: #ffe8d1;  /* Pale peach - soft highlights */
-  --color-neutral-light: #f8f5f0; /* Warm cream - backgrounds */
-  --color-neutral: #e8e1d9;       /* Soft taupe - borders */
-  --color-text-primary: #5c5550;  /* Warm brown - main text */
-  --color-text-light: #8b8179;    /* Light brown - secondary text */
+  /* Green Color Palette */
+  --color-primary: #10b981;      /* Vibrant green - primary */
+  --color-primary-light: #d1fae5; /* Light green - backgrounds */
+  --color-primary-dark: #047857;  /* Dark green - accents */
+  --color-secondary: #059669;     /* Medium green - secondary */
+  --color-secondary-light: #a7f3d0; /* Pale green - highlights */
+  --color-neutral-light: #f3f4f6; /* Light gray - backgrounds */
+  --color-neutral: #e5e7eb;       /* Gray - borders */
+  --color-text-primary: #1f2937;  /* Dark gray/black - main text */
+  --color-text-light: #6b7280;    /* Medium gray - secondary text */
 }
 
 /* Smooth scrolling */
@@ -205,64 +205,64 @@ html {
   transform: translateY(-8px);
 }
 
-/* Consistent Gradient System */
+/* Consistent Gradient System - Green */
 .gradient-healing {
-  background: linear-gradient(135deg, #d4f5e8 0%, #a8e6c7 50%, #f8f5f0 100%);
+  background: linear-gradient(135deg, #d1fae5 0%, #10b981 50%, #f3f4f6 100%);
 }
 
 .gradient-healing-vertical {
-  background: linear-gradient(180deg, #d4f5e8 0%, #f8f5f0 100%);
+  background: linear-gradient(180deg, #d1fae5 0%, #f3f4f6 100%);
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, #ffe8d1 0%, #ffd6b8 100%);
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
 }
 
 .gradient-primary {
-  background: linear-gradient(135deg, #a8e6c7 0%, #6dd3b3 100%);
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
 }
 
 .gradient-primary-to-neutral {
-  background: linear-gradient(135deg, #a8e6c7 0%, #f8f5f0 100%);
+  background: linear-gradient(135deg, #10b981 0%, #f3f4f6 100%);
 }
 
 /* Soft button style */
 .btn-soft {
-  background: linear-gradient(135deg, #a8e6c7 0%, #d4f5e8 100%);
-  color: #5c5550;
-  box-shadow: 0 8px 20px rgba(168, 230, 199, 0.25);
+  background: linear-gradient(135deg, #10b981 0%, #d1fae5 100%);
+  color: white;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
   transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
 .btn-soft:hover {
-  box-shadow: 0 12px 30px rgba(168, 230, 199, 0.35);
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.35);
   transform: translateY(-2px);
 }
 
 /* High contrast button for contact */
 .btn-contrast {
-  background: linear-gradient(135deg, #a8e6c7 0%, #6dd3b3 100%);
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
   color: white;
-  box-shadow: 0 12px 30px rgba(109, 211, 179, 0.35);
+  box-shadow: 0 12px 30px rgba(4, 120, 87, 0.35);
   transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
   font-weight: 700;
 }
 
 .btn-contrast:hover {
-  box-shadow: 0 16px 40px rgba(109, 211, 179, 0.5);
+  box-shadow: 0 16px 40px rgba(4, 120, 87, 0.5);
   transform: translateY(-3px);
 }
 
 .btn-contrast-warm {
-  background: linear-gradient(135deg, #ffd6b8 0%, #ff9d7e 100%);
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
   color: white;
-  box-shadow: 0 12px 30px rgba(255, 150, 126, 0.35);
+  box-shadow: 0 12px 30px rgba(5, 150, 105, 0.35);
   transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
   font-weight: 700;
 }
 
 .btn-contrast-warm:hover {
-  box-shadow: 0 16px 40px rgba(255, 150, 126, 0.5);
+  box-shadow: 0 16px 40px rgba(5, 150, 105, 0.5);
   transform: translateY(-3px);
 }
 

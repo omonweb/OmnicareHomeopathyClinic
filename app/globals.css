@@ -256,9 +256,9 @@ html {
   transform: translateY(-8px);
 }
 
-/* Consistent Uniform Gradient System - Green */
+/* Light Pastel Green Background */
 .gradient-uniform {
-  background: linear-gradient(180deg, #d1fae5 0%, #f3f4f6 100%);
+  background-color: #f0fdf4;
 }
 
 .gradient-primary {

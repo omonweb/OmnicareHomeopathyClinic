@@ -18,15 +18,71 @@ const cases = [
     id: 1,
     title: "Severe Skin Allergy",
     description: "Patient suffered from chronic eczema. Completely cured in 4 months.",
-    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Treatment",
-    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Recovery",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Skin",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Treatment",
   },
   {
     id: 2,
     title: "Hair Fall Treatment",
     description: "Significant regrowth and hair density improvement within 8 weeks.",
-    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Scalp",
-    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Regrowth",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Hair",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Growth",
+  },
+  {
+    id: 3,
+    title: "PCOD Management",
+    description: "Regulated hormones and improved symptoms in 5 months with natural treatment.",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+PCOD",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Recovery",
+  },
+  {
+    id: 4,
+    title: "Chronic Migraine",
+    description: "Reduced frequency and intensity from daily to once a month.",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Migraine",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Relief",
+  },
+  {
+    id: 5,
+    title: "Arthritis Pain Relief",
+    description: "Joint pain significantly decreased with improved mobility in 6 months.",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Arthritis",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Relief",
+  },
+  {
+    id: 6,
+    title: "Gastric Issues",
+    description: "Completely eliminated acid reflux and digestive problems in 3 months.",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Gastric",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Healing",
+  },
+  {
+    id: 7,
+    title: "Child Immunity Boost",
+    description: "Reduced frequent infections and improved overall health in children.",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Immunity",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Health",
+  },
+  {
+    id: 8,
+    title: "Thyroid Imbalance",
+    description: "Normalized thyroid levels with improved energy and metabolism.",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Thyroid",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Balance",
+  },
+  {
+    id: 9,
+    title: "Anxiety & Stress",
+    description: "Significantly reduced anxiety levels and improved sleep quality.",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Stress",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Calm",
+  },
+  {
+    id: 10,
+    title: "Allergic Rhinitis",
+    description: "Eliminated chronic nasal congestion and seasonal allergies completely.",
+    before: "https://placehold.co/400x300/e2e8f0/475569?text=Before+Allergies",
+    after: "https://placehold.co/400x300/dcfce7/166534?text=After+Relief",
   }
 ];
 
@@ -70,9 +126,14 @@ export default function Home() {
           {/* Logo / Name */}
           <div className="flex items-center gap-2 min-w-0">
             <FaLeaf className="text-[#10b981] text-xl md:text-2xl flex-shrink-0" />
-            <span className="font-bold text-base md:text-xl text-[#1f2937] tracking-tight truncate">
-              Dr. Richa Singh's Clinic
-            </span>
+            <div className="truncate">
+              <span className="font-bold text-base md:text-lg text-[#1f2937] tracking-tight block leading-tight">
+                Dr. Richa Singh's
+              </span>
+              <span className="font-bold text-xs md:text-sm text-[#10b981] tracking-tight block leading-tight">
+                Omnicare HomeoClinic
+              </span>
+            </div>
           </div>
 
           {/* Desktop Menu */}
@@ -117,7 +178,7 @@ export default function Home() {
 
 
       {/* --- ABOUT SECTION --- */}
-      <section id="about" className="pt-32 pb-20 px-4 max-w-5xl mx-auto">
+      <section id="about" className="pt-32 pb-20 px-4 max-w-5xl mx-auto gradient-uniform">
         <div 
           id="about-card"
           data-animate
@@ -146,39 +207,8 @@ export default function Home() {
       </section>
 
 
-      {/* --- TREATMENTS GRID --- */}
-      <section id="treatments" className="py-20 px-4 gradient-healing-vertical">
-        <h2 
-          id="treatments-title"
-          data-animate
-          className={`text-3xl md:text-4xl font-bold text-center text-[#1f2937] mb-12 transition-smooth ${
-            animatedElements.has('treatments-title') ? 'animate-fade-in-down' : 'opacity-0'
-          }`}
-          style={{ animationFillMode: 'both' }}
-        >
-          What We Treat
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto px-2">
-          {['Skin Allergies', 'Hair Fall', 'PCOD / PCOS', 'Gastric Issues', 'Migraine', 'Arthritis', 'Child Immunity', 'Diabetes Mgmt'].map((item, idx) => (
-            <div 
-              key={item}
-              id={`treatment-${idx}`}
-              data-animate
-              className={`bg-white p-4 md:p-6 rounded-2xl text-center border border-[#e5e7eb] flex flex-col items-center justify-center aspect-square transition-smooth glow-card ${
-                animatedElements.has(`treatment-${idx}`) ? 'animate-scale-in' : 'opacity-0'
-              }`}
-              style={{ animationDelay: `${idx * 50}ms`, animationFillMode: 'both' }}
-            >
-              <FaLeaf className="text-[#10b981] mb-3 text-xl md:text-2xl" />
-              <h3 className="font-bold text-[#1f2937] text-xs md:text-sm">{item}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-
-      {/* --- PROOF OF WORK SLIDER --- */}
-      <section id="proof" className="py-20 px-4 gradient-healing-vertical">
+      {/* --- PROOF OF WORK SLIDER (SUCCESS STORIES) --- */}
+      <section id="proof" className="py-20 px-4 gradient-uniform">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             id="proof-title"
@@ -245,6 +275,37 @@ export default function Home() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+
+      {/* --- TREATMENTS GRID --- */}
+      <section id="treatments" className="py-20 px-4 gradient-uniform">
+        <h2 
+          id="treatments-title"
+          data-animate
+          className={`text-3xl md:text-4xl font-bold text-center text-[#1f2937] mb-12 transition-smooth ${
+            animatedElements.has('treatments-title') ? 'animate-fade-in-down' : 'opacity-0'
+          }`}
+          style={{ animationFillMode: 'both' }}
+        >
+          What We Treat
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto px-2">
+          {['Skin Allergies', 'Hair Fall', 'PCOD / PCOS', 'Gastric Issues', 'Migraine', 'Arthritis', 'Child Immunity', 'Diabetes Mgmt'].map((item, idx) => (
+            <div 
+              key={item}
+              id={`treatment-${idx}`}
+              data-animate
+              className={`bg-white p-4 md:p-6 rounded-2xl text-center border border-[#e5e7eb] flex flex-col items-center justify-center aspect-square transition-smooth glow-card ${
+                animatedElements.has(`treatment-${idx}`) ? 'animate-scale-in' : 'opacity-0'
+              }`}
+              style={{ animationDelay: `${idx * 50}ms`, animationFillMode: 'both' }}
+            >
+              <FaLeaf className="text-[#10b981] mb-3 text-xl md:text-2xl" />
+              <h3 className="font-bold text-[#1f2937] text-xs md:text-sm">{item}</h3>
+            </div>
+          ))}
         </div>
       </section>
 

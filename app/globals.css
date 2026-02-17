@@ -182,10 +182,16 @@ html {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Button hover lift effect */
+/* Button hover lift effect - subtle */
 .hover-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(168, 230, 199, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.15);
+}
+
+/* Card hover effect - subtle */
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.15);
 }
 
 /* Card hover effect */
@@ -194,10 +200,55 @@ html {
   box-shadow: 0 20px 40px rgba(168, 230, 199, 0.2);
 }
 
-/* Soft glow card effect */
+/* Soft glow card effect - subtle */
 .glow-card {
-  box-shadow: 0 8px 24px rgba(168, 230, 199, 0.12);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
   transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.glow-card:hover {
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Soft button style */
+.btn-soft {
+  background: linear-gradient(135deg, #10b981 0%, #d1fae5 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+  transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.btn-soft:hover {
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.2);
+  transform: translateY(-1px);
+}
+
+/* High contrast button for contact */
+.btn-contrast {
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.2);
+  transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+  font-weight: 700;
+}
+
+.btn-contrast:hover {
+  box-shadow: 0 8px 20px rgba(4, 120, 87, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-contrast-warm {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+  transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+  font-weight: 700;
+}
+
+.btn-contrast-warm:hover {
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.25);
+  transform: translateY(-1px);
 }
 
 .glow-card:hover {
@@ -205,25 +256,13 @@ html {
   transform: translateY(-8px);
 }
 
-/* Consistent Gradient System - Green */
-.gradient-healing {
-  background: linear-gradient(135deg, #d1fae5 0%, #10b981 50%, #f3f4f6 100%);
-}
-
-.gradient-healing-vertical {
+/* Consistent Uniform Gradient System - Green */
+.gradient-uniform {
   background: linear-gradient(180deg, #d1fae5 0%, #f3f4f6 100%);
-}
-
-.gradient-accent {
-  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
 }
 
 .gradient-primary {
   background: linear-gradient(135deg, #10b981 0%, #047857 100%);
-}
-
-.gradient-primary-to-neutral {
-  background: linear-gradient(135deg, #10b981 0%, #f3f4f6 100%);
 }
 
 /* Soft button style */

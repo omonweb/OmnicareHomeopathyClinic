@@ -115,7 +115,7 @@ export default function Home() {
 
 
       {/* --- HERO SECTION --- */}
-      <section id="home" className="pt-32 pb-20 px-4 flex flex-col items-center text-center bg-gradient-to-b from-[#d4f5e8] to-[#f8f5f0] overflow-hidden relative">
+      <section id="home" className="pt-32 pb-20 px-4 flex flex-col items-center text-center gradient-healing-vertical overflow-hidden relative">
         {/* Decorative floating elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#ffe8d1] rounded-full opacity-30 animate-float blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#d4f5e8] rounded-full opacity-40 animate-float blur-3xl" style={{ animationDelay: '1s' }}></div>
@@ -182,7 +182,7 @@ export default function Home() {
 
 
       {/* --- TREATMENTS GRID --- */}
-      <section id="treatments" className="py-20 px-4 bg-gradient-to-b from-[#f8f5f0] via-[#d4f5e8]/30 to-[#f8f5f0]">
+      <section id="treatments" className="py-20 px-4 gradient-healing-vertical">
         <h2 
           id="treatments-title"
           data-animate
@@ -213,7 +213,7 @@ export default function Home() {
 
 
       {/* --- PROOF OF WORK SLIDER --- */}
-      <section id="proof" className="py-20 px-4 bg-gradient-to-b from-[#f8f5f0] to-[#d4f5e8]/20">
+      <section id="proof" className="py-20 px-4 gradient-healing-vertical">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             id="proof-title"
@@ -285,40 +285,50 @@ export default function Home() {
 
 
       {/* --- CONTACT SECTION (Updated for Online Consult) --- */}
-      <section id="contact" className="py-20 px-4 bg-gradient-to-b from-[#a8e6c7] to-[#6dd3b3] text-white rounded-t-[3rem] mt-10">
+      <section id="contact" className="py-20 px-4 gradient-primary rounded-t-[3rem] mt-10">
         <div className="max-w-5xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Ready to feel better?</h2>
-          <p className="text-white/90 text-lg">Choose how you want to consult with us.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">Ready to feel better?</h2>
+          <p className="text-white/95 text-lg">Choose how you want to consult with us.</p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             
             {/* OPTION 1: CLINIC VISIT */}
-            <div className="bg-white/15 backdrop-blur-md p-8 rounded-3xl border border-white/30 flex-1 card-hover transition-smooth hover:bg-white/20">
-              <h3 className="text-lg md:text-xl font-bold mb-4 flex items-center justify-center gap-2">
-                <FaMapMarkerAlt /> Clinic Visit
+            <div className="bg-white p-8 md:p-10 rounded-3xl flex-1 card-hover transition-smooth">
+              <div className="mb-6">
+                <div className="inline-flex items-center justify-center w-14 h-14 gradient-healing rounded-full mb-4">
+                  <FaMapMarkerAlt className="text-white text-xl" />
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-[#5c5550] mb-4">
+                Clinic Visit
               </h3>
-              <p className="text-white/95 mb-6 text-sm">
+              <p className="text-[#8b8179] mb-8 text-sm md:text-base leading-relaxed">
                 Dr. Richa Singh's Clinic <br/>
                 Lucknow, Uttar Pradesh <br/>
-                <span className="text-white/80">(Professional Clinic)</span>
+                <span className="text-[#b8a9a0]">(Professional Clinic)</span>
               </p>
               
               <a 
                 href="https://maps.app.goo.gl/SYtexKEosRbSgAuw8" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-[#a8e6c7] px-8 py-3 rounded-full font-bold hover:shadow-lg transition-smooth hover-lift inline-block w-full"
+                className="btn-contrast px-8 py-4 rounded-full inline-block w-full"
               >
                 Get Directions
               </a>
             </div>
 
             {/* OPTION 2: ONLINE CONSULTATION (New) */}
-            <div className="bg-white/15 backdrop-blur-md p-8 rounded-3xl border border-white/30 flex-1 card-hover transition-smooth hover:bg-white/20">
-              <h3 className="text-lg md:text-xl font-bold mb-4 flex items-center justify-center gap-2">
-                <FaLaptopMedical /> Online Consult
+            <div className="bg-white p-8 md:p-10 rounded-3xl flex-1 card-hover transition-smooth">
+              <div className="mb-6">
+                <div className="inline-flex items-center justify-center w-14 h-14 gradient-accent rounded-full mb-4">
+                  <FaLaptopMedical className="text-white text-xl" />
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-[#5c5550] mb-4">
+                Online Consult
               </h3>
-              <p className="text-white/95 mb-6 text-sm">
+              <p className="text-[#8b8179] mb-8 text-sm md:text-base leading-relaxed">
                 Consult from the comfort of your home <br/> via Video/Audio Call.
               </p>
               
@@ -326,7 +336,7 @@ export default function Home() {
                 href="https://wa.me/919450064628?text=Hello%20Dr.%20Richa,%20I%20am%20interested%20in%20an%20ONLINE%20consultation." 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-[#a8e6c7] px-8 py-3 rounded-full font-bold hover:shadow-lg transition-smooth hover-lift inline-block w-full"
+                className="btn-contrast-warm px-8 py-4 rounded-full inline-block w-full"
               >
                 Chat for Online Consult
               </a>
@@ -334,7 +344,7 @@ export default function Home() {
 
           </div>
 
-          <div className="text-white/90 pt-8 border-t border-white/30 mt-8">
+          <div className="text-white/95 pt-8 border-t border-white/20 mt-8">
             <p className="text-sm">Call for appointment</p>
             <p className="text-2xl md:text-3xl font-bold text-white mt-2">+91 94500 64628</p>
           </div>

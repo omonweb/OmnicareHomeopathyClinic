@@ -205,6 +205,27 @@ html {
   transform: translateY(-8px);
 }
 
+/* Consistent Gradient System */
+.gradient-healing {
+  background: linear-gradient(135deg, #d4f5e8 0%, #a8e6c7 50%, #f8f5f0 100%);
+}
+
+.gradient-healing-vertical {
+  background: linear-gradient(180deg, #d4f5e8 0%, #f8f5f0 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #ffe8d1 0%, #ffd6b8 100%);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #a8e6c7 0%, #6dd3b3 100%);
+}
+
+.gradient-primary-to-neutral {
+  background: linear-gradient(135deg, #a8e6c7 0%, #f8f5f0 100%);
+}
+
 /* Soft button style */
 .btn-soft {
   background: linear-gradient(135deg, #a8e6c7 0%, #d4f5e8 100%);
@@ -216,6 +237,33 @@ html {
 .btn-soft:hover {
   box-shadow: 0 12px 30px rgba(168, 230, 199, 0.35);
   transform: translateY(-2px);
+}
+
+/* High contrast button for contact */
+.btn-contrast {
+  background: linear-gradient(135deg, #a8e6c7 0%, #6dd3b3 100%);
+  color: white;
+  box-shadow: 0 12px 30px rgba(109, 211, 179, 0.35);
+  transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+  font-weight: 700;
+}
+
+.btn-contrast:hover {
+  box-shadow: 0 16px 40px rgba(109, 211, 179, 0.5);
+  transform: translateY(-3px);
+}
+
+.btn-contrast-warm {
+  background: linear-gradient(135deg, #ffd6b8 0%, #ff9d7e 100%);
+  color: white;
+  box-shadow: 0 12px 30px rgba(255, 150, 126, 0.35);
+  transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+  font-weight: 700;
+}
+
+.btn-contrast-warm:hover {
+  box-shadow: 0 16px 40px rgba(255, 150, 126, 0.5);
+  transform: translateY(-3px);
 }
 
 /* Mobile-first touch optimization */
